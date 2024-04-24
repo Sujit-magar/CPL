@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Design Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="menu">
+            <li><a href="https://www.playstation.com/en-in/">Home</a></li>
+            <li><a href="https://www.playstation.com/en-in/ps5/games/?smcid=pdc%3Aen-i
+n%3Aprimary%20nav%3Amsg-games%3Aps5">Games</a></li>
+            <li>
+                <a href="https://www.playstation.com/en-in/accessories/?smcid=pdc%3Aen
+in%3Aprimary%20nav%3Amsg-accessories%3Aall-accessories">Accessori
+                    es</a>
+            </li>
+            <li>
+                <a href="https://blog.playstation.com/">Blogs</a>
+            </li>
+            <li>
+                <a href="https://www.playstation.com/en-in/support/?smcid=pdc%3Aen-in%
+3Aaccessories%3Aprimary%20nav%3Amsg-support%3Asupport">Suppor
+                    t</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="header-tip">
+        <a href="https://www.playstation.com/en-in/" class="latest">New:
+            GAMES,ACCESSORIES, BLOGS & MUCHMORE.... </a>
+    </div>
+    <p class="header"> PLAYSTATION </p>
+    <main>
+        <section>
+            <h2>Responsive Design Website PS5!</h2>
+            <button>
+                <a href="https://en.wikipedia.org/wiki/God_of_War_Ragnar%C3%B6k" target="blank">Lets Go....
+                </a></button>
+        </section>
+        <section id="img-section">
+            <img src="maxresdefault.jpg" alt=" ps5 error">
+        </section>
+        <section id="img-section">
+            <img src="ps4minifn.jpg" alt="Responsive Design ERROR" />
+        </section>
+    </main>
+    <footer>
+        <div>&copy; 2024 Sony Interactive Entertainment Europe Limited
+            (SIEE)</div>
+    </footer>
+    <script>
+        document.querySelector(".menu-toggle").addEventListener("click",
+            function () {
+                const menu = document.querySelector(".menu");
+                menu.classList.toggle("active");
+            });
+    </script>
+</body>
+
+</html>
+<style>
+    /* styles.css */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #0e1ce0;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        height: 80vh;
+        padding: 64px;
+    }
+
+    button {
+        background-color: #130e0e9a;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        width: 200px;
+        color: white;
+    }
+
+    section {
+        max-width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    img {
+        width: 500px;
+        height: 100%;
+    }
+
+    h2 {
+        font-size: 64px;
+        font-weight: 600;
+        margin-bottom: 16px;
+        text-align: left;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 24px;
+        margin: 0;
+    }
+
+    nav li {
+        display: inline;
+        margin-right: 20px;
+        padding: 24px;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        color: black;
+        padding: 2px;
+    }
+
+    footer {
+        padding: 12px;
+        text-align: center;
+        font-size: 12px;
+        color: black;
+    }
+
+    .header-tip {
+        padding: 64px 0px 0px 64px;
+    }
+
+    .latest {
+        text-decoration: none;
+        color: black;
+        border: 1px solid rgb(218, 218, 218);
+        padding: 8px 12px;
+        border-radius: 100px;
+        font-size: x-small;
+        top: 64px;
+        left: 64px;
+    }
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 10px;}
+
+        .menu-toggle .bar {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+            transition: 0.4s;
+        }
+
+    .menu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+    }
+        .menu li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Mobile Styles (320px — 480px) */
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+                background-color: black;
+                color: #fff;
+            }
+
+            main {
+                flex-direction: column;
+                padding: 24px;
+            }
+
+            .header-tip {
+                padding: 24px 0px 0px 24px;
+            }
+
+            .latest {
+                color: white;
+            }
+
+            section {
+                width: 100%;
+                padding: 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            h2 {
+                font-size: 32px;
+                margin-bottom: 12px;
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            .menu {
+                display: none;
+                flex-direction: column;
+                background-color: #32cd32;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                z-index: 1;
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                background-color: #000;
+            }
+
+            #img-section {
+                display: none;
+            }
+
+            button {
+                width: 150px;
+            }
+
+            footer {
+                color: white;
+            }
+        }
+
+        .header {
+            text-align: center;
+            font-size: 100px;
+            font-family: "inter";
+        }
+
+        /* Tablet Styles (481px — 768px) */
+        @media (min-width: 481px) and (max-width: 768px) {
+            main {
+                flex-direction: column;
+                padding: 40px;
+                height: auto;
+            }
+
+            section {
+                width: 100%;
+            }
+
+            header-tip {
+                padding: 40px 0px 0px 40px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            h2 {
+                font-size: 40px;
+                margin-bottom: 14px;
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            footer {
+                color: white;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+
+        /* Laptop Styles (769px — 1024px) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            main {
+                padding: 64px;
+            }
+
+            h2 {
+                font-size: 44px;
+                margin-bottom: 16px;
+            }
+
+            img {
+                width: 384px;
+                height: 100%;
+            }
+        }
+</style>
